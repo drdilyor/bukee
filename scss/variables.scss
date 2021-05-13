@@ -1,0 +1,28 @@
+$primary: #65e496;
+$primary-light: lighten($primary, 15%);
+$primary-dark: darken($primary, 15%);
+// a little gradient on primary color
+$primary-accent: #5fc9a6;
+$primary-gradient: linear-gradient(90deg, $primary-accent 0%, #5fc9ba 100%);
+$secondary: #44444f;
+$secondary-text: #9191b5;
+$gray: #696980;
+
+$font-primary: 'Roboto Slab', serif;
+$font-content: 'Roboto', sans-serif;
+
+$page-gradient: linear-gradient(135deg, rgba(69,111,136,1) 0%, rgba(80,170,156,1) 100%);
+$page-gradient-inverted: linear-gradient(135deg, rgba(80,170,156,1) 0%, rgba(69,111,136,1) 100%);
+$page-gray: #f5f6fa;
+$button-gradient-start: #65e49b;
+$button-gradient-end: #65e4b0;
+$button-light: #b2f1be;
+$button-dark: #59ba88;
+
+$constraint-width: 1220px;
+$constraint-padding: 2rem;
+$column-gap: 1.5rem;
+$gradient-image-padding: 3rem;
+
+$tablet: 768px;
+$desktop: 992px;

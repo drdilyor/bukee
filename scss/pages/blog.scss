@@ -1,0 +1,34 @@
+.page-blog {
+  background-color: $page-gray;
+  &-footer {
+    padding-top: 5em;
+    text-align: center;
+  }
+}
+
+.blog-entry {
+  // tablet only
+  @media screen and (min-width: $tablet) and (max-width: $desktop - .1px) {
+  // @media screen and (max-width: $desktop - .1px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    > img {
+      margin-left: 1em;
+    }
+  }
+}
+
+.blog-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1em;
+}
+
+.blog-subtitle {
+  margin-top: -1em;
+  > .primary {
+    color: $primary
+  }
+}

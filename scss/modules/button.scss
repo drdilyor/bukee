@@ -1,0 +1,51 @@
+@mixin button-dimensions {
+  padding: 12px 34px;
+  border-bottom: 2px solid $button-light;
+  border: none;
+  border-radius: 2px;
+}
+.button {
+  display: inline-block;
+  @include button-dimensions;
+  font-size: 18px;
+  font-family: $font-primary;
+  line-height: 24px;
+  text-decoration: none;
+  background: $button-gradient-start;
+  background: linear-gradient(to right, $button-gradient-start 0%, $button-gradient-end 100%);
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background: lighten($button-gradient-start, 5%);
+    background: linear-gradient(to right,
+      lighten($button-gradient-start, 5%),
+      lighten($button-gradient-end, 5%),
+    );
+  }
+  &:active {
+    background: $button-dark;
+  }
+  &:focus {
+    outline: none;
+    border-bottom-color: transparent;
+    box-shadow: 0 0 0 4px rgba($button-gradient-start, .5);
+  }
+  &.is-dark {
+    border-bottom-color: $button-dark;
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($button-dark, .5);
+    }
+  }
+  &.is-spaced {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+
+.is-expanded {
+  display: block;
+  width: 100%;
+}

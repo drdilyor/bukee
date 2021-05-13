@@ -1,0 +1,92 @@
+.l-constrainted {
+  max-width: $constraint-width;
+  margin: 0 auto;
+  padding: 0 $constraint-padding;
+}
+
+.cols {
+  margin-top: $column-gap * -1;
+  margin-bottom: $column-gap * -1;
+  margin-right: $column-gap * -1;
+  margin-left: $column-gap * -1;
+}
+
+.no-wrap {
+  flex-wrap: nowrap !important;
+}
+
+.col {
+  display: block;
+  flex: 1 1 0;
+  padding: $column-gap;
+  &.is-narrow {
+    width: auto;
+  }
+}
+
+@include tablet {
+  .cols:not(.is-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+
+    @for $i from 1 to 12 {
+      & > .col.is-#{$i} {
+        flex: none;
+        width: 100% / 12 * $i;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .cols.is-desktop {
+    display: flex;
+    flex-wrap: wrap;
+
+    @for $i from 1 to 12 {
+      & > .col.is-#{$i} {
+        flex: none;
+        width: 100% / 12 * $i;
+      }
+    }
+  }
+}
+
+.l-page {
+  padding: {
+    top: 10em;
+    bottom: 10em;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include desktop {
+  .l-page-with-img {
+    display: flex;
+    &:not(.is-inverted) > .l-page-primary {
+      padding-left: 4em;
+    }
+    &.is-inverted > .l-page-primary {
+      order: -1;
+      padding-right: 4em;
+    }
+  }
+  .l-page-primary {
+    // HACK: image gets small because of long paragraphs
+    flex: 1;
+    width: min-content;
+  }
+}
+
+@media screen and (max-width: $desktop - .1px) {
+  .l-page-primary {
+    padding-top: 2em;
+  }
+}
+
+.l-centered-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}

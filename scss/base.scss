@@ -1,0 +1,92 @@
+html, body {
+  min-height: 100%;
+}
+
+:root {
+  font-size: 15px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-content;
+  color: black;
+}
+
+* { box-sizing: inherit }
+
+h1, h2, h3, h4, h5, h6, .subtitle {
+  font-family: $font-primary;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin-bottom: 1em;
+  font-size: 18px;
+  color: $gray;
+}
+
+.subtitle {
+  margin-bottom: 2em;
+  font-size: 18px;
+  color: $primary;
+  letter-spacing: 1px;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h1, h2 {
+  font-size: 48px;
+}
+
+h1, h2, h3 {
+  + .subtitle {
+    margin-top: -1rem;
+  }
+}
+
+h2 { 
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+a:not(.button) {
+  text-decoration: none;
+  color: $primary;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: darken($primary, 15%);
+  }
+}
+
+p {
+  margin: 0;
+  line-height: 24px;
+  letter-spacing: .8px;
+  color: $gray;
+}
+
+p, ol {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+ul {
+  padding-left: 0;
+}

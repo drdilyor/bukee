@@ -1,0 +1,23 @@
+@include desktop {
+  .author-info {
+    padding-top: .8rem;
+  }
+}
+
+.dashboard {
+  margin: 9rem 0;
+}
+
+.dashboard-value {
+  font-family: $font-primary;
+  font-size: 78px;
+  font-weight: 100;
+  letter-spacing: 4px;
+  color: $primary;
+}
+.dashboard-heading {
+  margin-top: .3em;
+  font-size: 1.2rem;
+  letter-spacing: -.3px;
+  color: $gray;
+}

@@ -1,0 +1,63 @@
+.page-contents {
+  background: $page-gray;
+  padding-bottom: 16rem;
+}
+
+.page-contents-table {
+  @include mobile {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+.contents-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: list-item;
+}
+
+.contents-item {
+  line-height: 32px;
+  color: $gray;
+
+  @include tablet {
+    &.is-top {
+      margin-top: 32px * -5;
+      &,
+      & ~ .contents-item {
+        margin-left: 50%;
+      }
+    }
+  }
+  
+  // HACK: because marker precedes before
+  &::before {
+    content: '+';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: .5em;
+    // center
+    text-align: center;
+    line-height: 24px;
+
+    background: $primary-accent;
+    background: $primary-gradient;
+    color: white;
+  }
+}
+
+.counter {
+  content: counter(list-item) '. ';
+  counter-increment: list-item;
+}
+
+.featured-in-icons {
+  display: inline-flex;
+}
+.featured-in-icons > a {
+  display: flex; // HACK: makes some icons centered
+  margin-left: .5em;
+  width: 1em;
+}

@@ -1,0 +1,17 @@
+.level {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+.level-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include mobile {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

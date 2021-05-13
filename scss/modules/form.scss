@@ -1,0 +1,9 @@
+input {
+  @include button-dimensions;
+  display: block;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  background: $secondary;
+  color: $secondary-text;
+  outline: none;
+}

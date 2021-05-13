@@ -1,0 +1,23 @@
+.gradient-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.gradient-image {
+  padding: $gradient-image-padding 0;
+  margin-left: $gradient-image-padding;
+  background: $page-gradient;
+  > img {
+    margin-left: -$gradient-image-padding;
+    width: 100%;
+    // min-height: 100%;
+    object-fit: cover;
+  }
+  &.is-left {
+    margin-left: 0;
+    margin-right: $gradient-image-padding;
+    background: $page-gradient-inverted;
+    > img {
+      margin-left: $gradient-image-padding;
+    }
+  }
+}

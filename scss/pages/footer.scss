@@ -1,0 +1,22 @@
+.page-footer {
+  background: $secondary;
+  p {
+    color: $secondary-text;
+    letter-spacing: 0;
+  }
+}
+
+.footer-title {
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.footer-col {
+  padding: 2em;
+}
+
+a.footer-link {
+  display: block;
+  margin-bottom: .3em;
+  color: $secondary-text;
+}

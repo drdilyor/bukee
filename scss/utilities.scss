@@ -1,0 +1,19 @@
+.has-text-white {
+  color: white !important;
+  * {
+    color: inherit;
+  }
+}
+.has-text-centered {
+  text-align: center;
+}
+.has-content-centered {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.has-children-expanded {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}

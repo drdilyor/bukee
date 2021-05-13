@@ -1,0 +1,23 @@
+.link-all-caps {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+figure {
+  margin: 0;
+}
+
+.has-img {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  > img {
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+}

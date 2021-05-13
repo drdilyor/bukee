@@ -1,0 +1,46 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  outline: 1px solid red;
+  outline-offset: -1px;
+  &.is-active,
+  &.is-entering,
+  &.is-leaving {
+    display: block;
+  }
+  &.is-leaving {
+    transition: transform 1s;
+    transform: translateX(-100%);
+  }
+  &.is-entering {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: transform 1s;
+    transform: translateX(-100%);
+  }
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+
+  > li {
+    width: .5em;
+    height: .5em;
+    border-radius: .25em;
+    background: $primary;
+    margin: 0 .25em;
+    transition: width .5s;
+  }
+  > .is-active {
+    width: 2em;
+  }
+}
+
